@@ -1,3 +1,5 @@
+![logo](Logo.png)
+
 # ✈️ PNpilot - Aircraft Part Number Scraper
 
 PNpilot is a smart scraping bot that takes a list of aircraft part numbers and finds the **cheapest prices** across multiple aviation parts websites. It's designed as a **MVP** with built-in safety, login support, proxy rotation, and a Streamlit UI for simple use.
