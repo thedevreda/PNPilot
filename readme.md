@@ -68,6 +68,27 @@ http://123.123.123.123:8080
 http://234.234.234.234:3128
 ```
 
+| Option                                                                 | Pros              | Cons                      |
+| ---------------------------------------------------------------------- | ----------------- | ------------------------- |
+| Free proxy lists                                                       | Free              | Unreliable, often blocked |
+| [ScraperAPI](https://www.scraperapi.com/) (free tier)                  | Easy to integrate | Limited free quota        |
+| [BrightData](https://brightdata.com/) or [Oxylabs](https://oxylabs.io) | High quality      | Paid only                 |
+
+### Get Free HTTP/HTTPS Proxy Lists🌍
+| Site                                                                     | Type       | Notes                             |
+| ------------------------------------------------------------------------ | ---------- | --------------------------------- |
+| [https://free-proxy-list.net](https://free-proxy-list.net)               | HTTP/HTTPS | Filter by country, anonymity, SSL |
+| [https://spys.one](http://spys.one/en/)                                  | HTTP/SOCKS | Very detailed but needs parsing   |
+| [https://www.sslproxies.org](https://www.sslproxies.org)                 | HTTPS only | Simple copy-paste format          |
+| [https://proxy-daily.com](https://proxy-daily.com/)                      | Mixed      | New lists updated daily           |
+| [https://hidemy.name/en/proxy-list/](https://hidemy.name/en/proxy-list/) | Filterable | Offers high-anonymity options     |
+
+| Can you run without proxies? | ✔️ Yes, but limit your request rate |
+| Can you avoid CAPTCHA forever? | ❌ No, but you can reduce the chance |
+| Should you rotate headers & delays? | ✅ Absolutely |
+| Should you automate? | ✅ Use cron or Streamlit deployment |
+
+
 ---
 
 ## 📥 Failed Scrapes
@@ -95,6 +116,21 @@ http://234.234.234.234:3128
 
 ---
 
+# ✅ Anti-blocking Measures Included
+
+
+| Protection                 | How it's Handled                                                                                                      |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| **Rotating User-Agent**    | Uses a random User-Agent for each request via a predefined pool.                                                      |
+| **Delay Between Requests** | Adds `random.uniform(1.5, 3.0)` and `random.uniform(2, 4)` seconds of sleep between requests to mimic human browsing. |
+| **Session per Website**    | Maintains a `requests.Session()` per website to keep cookies and avoid stateless traffic spikes.                      |
+| **Processed Log**          | Avoids duplicate processing using `processed.txt`.                                                                    |
+| **Failed Log**             | Captures failed parts in `failed.txt` for retry.                                                                      |
+| **Captcha Check**          | Detects CAPTCHA or "are you human" text in responses and skips scraping that page, saving it to `failed.txt`.         |
+| **Proxy Support**          | Optional: random proxies loaded from `proxies.txt` (can be used to avoid IP bans).                                    |
+| **Login Session**          | Authenticates with each site to gain access to protected content (if required).                                       |
+
+---
 ## 🚀 Running the App
 
 ```bash

@@ -1,0 +1,10 @@
+Part Number,Price,Link,Supplier
+021-355-0,$123.00,https://httpbin.org/get?part=021-355-0,DemoSupplier
+M20101-01,$123.00,https://httpbin.org/get?part=M20101-01,DemoSupplier
+M01103-02,$123.00,https://httpbin.org/get?part=M01103-02,DemoSupplier
+114079019,$123.00,https://httpbin.org/get?part=114079019,DemoSupplier
+89794077,$123.00,https://httpbin.org/get?part=89794077,DemoSupplier
+887477,$123.00,https://httpbin.org/get?part=887477,DemoSupplier
+D24001000,$123.00,https://httpbin.org/get?part=D24001000,DemoSupplier
+14320-030,$123.00,https://httpbin.org/get?part=14320-030,DemoSupplier
+XXX@!#,$123.00,https://httpbin.org/get?part=XXX%40!,DemoSupplier
